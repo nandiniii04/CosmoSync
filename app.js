@@ -12,7 +12,7 @@ document.addEventListener("keypress", function () {
     if (!started) {
         console.log("game is started");
         started = true;
-        reset();      // reset karna start hone par zaroori hai
+        reset();      
         levelUp();
     }
 });
@@ -32,18 +32,18 @@ function userFlash(btn) {
 }
 
 function levelUp() {
-    level++;
+    level++
     h2.innerText = `Level  ${level}`;
 
-    // Random index between 0 and 3 (4 buttons)
+   
     let randIdx = Math.floor(Math.random() * btns.length);
-    let randColor = btns[randIdx];
+    le randColor = btns[randIdx];
     let randBtn = document.querySelector(`.${randColor}`);
 
     gameSeq.push(randColor);
     console.log("game sequence:", gameSeq);
 
-    userSeq = [];   // user clicks reset kar do har new level pe
+    userSeq = [];   
 
     btnFlash(randBtn);
 }
